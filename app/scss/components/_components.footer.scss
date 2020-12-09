@@ -1,0 +1,186 @@
+/*
+    footer style
+ */
+
+.footer {
+  background: $blue-gradient;
+  padding: 73px 0 8px;
+  position: relative;
+  z-index: 9;
+
+  @include mq(md) {
+    padding: 43px 0 3px;
+  }
+
+  &__content {
+    position: relative;
+
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 79px;
+        height: 79px;
+        background: $pale-yellow;
+        box-shadow: $shadow1;
+        border-radius: 5px;
+        transform: rotate(-12.35deg);
+        position: absolute;
+        top: -53px;
+        left: 68px;
+
+        @include mq(md) {
+          display: none;
+        }
+      }
+    }
+
+    span.sale {
+      position: absolute;
+      top: 315px;
+      left: 103px;
+
+      @include mq(xl) {
+        left: 83px;
+      }
+
+      @include mq(lg) {
+        left: 0;
+      }
+
+      @include mq(md) {
+        position: static;
+        margin: 2px auto 0;
+      }
+    }
+
+    .price {
+      position: absolute;
+      top: 186px;
+      right: 160px;
+
+      @include mq(xl) {
+        right: 140px;
+      }
+
+      @include mq(lg) {
+        right: 35px;
+      }
+
+      @include mq(md) {
+        position: static;
+        text-align: center;
+      }
+    }
+
+    &-img {
+      max-width: 550px;
+      margin: -47px 0 -43px 24.5%;
+      position: relative;
+
+      @include mq(xl) {
+        margin-left: 23%;
+      }
+
+      @include mq(lg) {
+        margin-left: 18%;
+      }
+
+      @include mq(md) {
+        margin: -39px auto -33px;
+        left: -5%;
+      }
+    }
+
+    .to-order {
+
+    }
+
+    >h6.small {
+      text-align: center;
+      color: $light-blue;
+      margin-top: 27px;
+      position: relative;
+      z-index: 11;
+
+      @include mq(md) {
+        margin-top: 36px;
+      }
+
+      a {
+        display: inline-block;
+        color: inherit;
+      }
+    }
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -3;
+    }
+
+    &:before {
+      width: 1047px;
+      height: 853px;
+      background: url("../img/footer/leaves-first.png") no-repeat center/cover;
+      bottom: 0;
+      left: -546px;
+
+      @include mq(lg) {
+        display: none;
+      }
+    }
+
+    &:after {
+      width: 789px;
+      height: 574px;
+      background: url("../img/footer/leaves-second.png") no-repeat center/cover;
+      bottom: 0;
+      right: -405px;
+
+      @include mq(lg) {
+        left: -305px;
+      }
+    }
+  }
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @include mq(md) {
+      width: 1000px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &:before {
+    height: 151px;
+    background: url("../img/footer/wave-first.png") no-repeat center/cover;
+
+    @include mq(md) {
+      height: 79.17px;
+      bottom: 11.83px;
+    }
+  }
+
+  &:after {
+    height: 126px;
+    background: url("../img/footer/wave-second.png") no-repeat center/cover;
+
+    @include mq(md) {
+      height: 103px;
+    }
+  }
+}

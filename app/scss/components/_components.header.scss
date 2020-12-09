@@ -1,0 +1,411 @@
+/*
+    header style
+ */
+
+.header {
+  background: $blue-gradient;
+  padding: 19px 0 62.79px;
+  position: relative;
+  z-index: 9;
+
+  @include mq(md) {
+    padding: 32px 0 23px;
+  }
+
+  &__content {
+    position: relative;
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      max-width: 662px;
+      margin: 0 auto 46px;
+
+      @include mq(md) {
+        display: none;
+      }
+
+      h6.small {
+        color: $light-blue;
+
+        &:nth-child(2) {
+          position: relative;
+
+          &:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: $pale-yellow;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          &:before {
+            left: -36px;
+          }
+
+          &:after {
+            right: -36px;
+          }
+        }
+      }
+    }
+
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    span.sale {
+      position: absolute;
+      top: 277px;
+      right: 9.25%;
+
+      @include mq(xl) {
+        right: 8%;
+      }
+
+      @include mq(lg) {
+        right: 0;
+      }
+
+      @include mq(md) {
+        position: static;
+        margin: 7px auto 4px;
+      }
+    }
+
+    .price {
+      position: absolute;
+      top: 356px;
+      left: 12.83%;
+
+      @include mq(xl) {
+        left: 12%;
+      }
+
+      @include mq(lg) {
+        left: 4%;
+      }
+
+      @include mq(md) {
+        position: static;
+        text-align: center;
+      }
+    }
+
+    &-img {
+      max-width: 550px;
+      margin: -47px 0 -34px 24.5%;
+      position: relative;
+
+      @include mq(xl) {
+        margin-left: 23%;
+      }
+
+      @include mq(lg) {
+        margin-left: 18%;
+      }
+
+      @include mq(md) {
+        margin: -39px auto -33px;
+        left: -5%;
+      }
+
+      img {
+        position: relative;
+        z-index: 9;
+      }
+
+      &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+
+      &:before {
+        width: 234px;
+        height: 456px;
+        background: url("../img/header/boy.png") no-repeat center/cover;
+        top: 68px;
+        left: -319px;
+
+        @include mq(md) {
+          top: -43px;
+          left: -48px;
+        }
+      }
+
+      &:after {
+        width: 40px;
+        height: 40px;
+        background: $pale-yellow;
+        box-shadow: $shadow1;
+        border-radius: 5px;
+        transform: rotate(-12.35deg);
+        top: 128px;
+        left: -317px;
+
+        @include mq(md) {
+          display: none;
+        }
+      }
+    }
+
+    .to-order {
+
+    }
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    &:before {
+      width: 1920px;
+      height: 809px;
+      background: url("../img/header/leaves.png") no-repeat center/cover;
+      top: -19px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    &:after {
+      width: 58px;
+      height: 58px;
+      background: $pale-red;
+      box-shadow: $shadow1;
+      border-radius: 5px;
+      transform: rotate(7.3deg);
+      bottom: -3px;
+      right: 80px;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 99px;
+
+    @include mq(md) {
+      margin-top: 36px;
+      display: block;
+    }
+
+    &-video {
+      width: 600px;
+
+      @include mq(lg) {
+        width: 55%;
+      }
+
+      @include mq(md) {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      p {
+        margin: 10px auto 40px;
+
+        @include mq(md) {
+          margin: 5px auto 30.57px;
+        }
+      }
+
+      figure.clip {
+        position: relative;
+        height: 362px;
+        cursor: pointer;
+        box-shadow: $shadow2;
+        border-radius: 5px;
+
+        @include mq(lg) {
+          height: 318px;
+        }
+
+        @include mq(md) {
+          width: 600px;
+          height: 362px;
+          margin: 0 auto;
+        }
+
+        img {
+          border-radius: inherit;
+        }
+
+        .video-play {
+          width: 60px;
+          height: 60px;
+          background: url("../img/header/video-play.png") no-repeat center/cover;
+          border-radius: 50%;
+          box-shadow: $solid-shadow;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 11;
+          pointer-events: none;
+          transition: all 0.5s ease-in-out;
+        }
+
+        &:before, &:after {
+          content: "";
+          display: block;
+          background: $pale-yellow;
+          box-shadow: $shadow1;
+          border-radius: 5px;
+          position: absolute;
+          pointer-events: none;
+        }
+
+        &:before {
+          width: 154px;
+          height: 154px;
+          transform: rotate(-40.59deg);
+          bottom: 52.19px;
+          left: -102.63px;
+        }
+
+        &:after {
+          width: 72px;
+          height: 72px;
+          transform: rotate(7.87deg);
+          top: -24px;
+          right: -32.16px;
+        }
+
+        &:hover {
+
+          //&:after {
+          //  opacity: 0;
+          //}
+        }
+      }
+    }
+
+    &-info {
+      max-width: 600px;
+      box-sizing: border-box;
+      padding: 0 32px 0 128px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 129px;
+
+      @include mq(xl) {
+        width: 540px;
+        padding-left: 88px;
+      }
+
+      @include mq(lg) {
+        width: 45%;
+        padding: 0 0 0 5%;
+      }
+
+      @include mq(md) {
+        padding: 0;
+        width: 100%;
+        max-width: 440px;
+        margin: 28.64px auto 0;
+      }
+
+      figure {
+        box-sizing: border-box;
+        width: 180px;
+        padding: 31px 9px 16px;
+        background: $white;
+        box-shadow: $shadow1;
+        border-radius: 10px;
+        position: relative;
+        z-index: 9;
+        margin-bottom: 80px;
+
+        img {
+
+        }
+
+        h6 {
+          text-align: center;
+          color: $dark-dark-blue;
+          margin: 13px auto 0;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          top: 25px;
+          left: 33px;
+          z-index: -1;
+          transform: rotate(-62.58deg);
+        }
+
+        &:first-child, &:last-child {
+
+          &:before {
+            background: $light-blue;
+          }
+        }
+
+        &:nth-child(2), &:nth-child(3) {
+
+          &:before {
+            background: $pale-red;
+          }
+        }
+
+        &:nth-child(3) {
+          margin-bottom: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 518px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    @include mq(md) {
+      width: 1000px;
+      height: 518px;
+      top: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &:before {
+    background: url("../img/header/wave-first.png") no-repeat center/cover;
+
+    @include mq(md) {
+    }
+  }
+
+  &:after {
+    background: url("../img/header/wave-second.png") no-repeat center/cover;
+  }
+}

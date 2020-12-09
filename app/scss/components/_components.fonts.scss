@@ -1,0 +1,43 @@
+/*
+    font face
+ */
+
+@font-face {
+  font-family: "ProximaNova-ExtraBold";
+  src: url("../fonts/ProximaNova-Extrabld.woff");
+}
+$eb : "ProximaNova-ExtraBold";
+
+@font-face {
+  font-family: "ProximaNova-Light";
+  src: url("../fonts/ProximaNova-Light.woff");
+}
+$l : "ProximaNova-Light";
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url("../fonts/ProximaNova-Regular.woff");
+}
+$r : "ProximaNova-Regular";
+
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  src: url("../fonts/ProximaNova-Semibold.woff");
+}
+$sb : "ProximaNova-Semibold";
+
+$blue-gradient: linear-gradient(90deg, #5db0ec 0%, #4a99d1 100%);
+$white: #ffffff;
+$pale-yellow: #fef286;
+$light-blue: #c5e7ff;
+$pale-red: #fbc8c8;
+$bright-blue: #a2f0fb;
+$bright-yellow: #fff500;
+$dark-blue: #417da7;
+$dark-dark-blue: #1b4462;
+$red: #cf4141;
+$grey: #6b8191;
+
+$shadow1: 0px 0px 5px rgba(47, 105, 146, 0.3);
+$solid-shadow: 2px 2px 0px #3783ba;
+$shadow2: 0px 0px 50px rgba(47, 105, 146, 0.5);

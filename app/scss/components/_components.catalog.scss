@@ -1,0 +1,295 @@
+/*
+    catalog style
+ */
+
+.catalog {
+  background: $blue-gradient;
+  padding: 55px 0 85px;
+
+  @include mq(md) {
+    padding: 46px 0 59px;
+  }
+
+  &__content {
+    position: relative;
+
+    section {
+      box-sizing: border-box;
+      padding: 39px 28px 38px;
+      background: url("../img/catalog/bg.png") no-repeat center/cover, $white;
+      border-radius: 10px;
+      position: relative;
+      z-index: 9;
+      margin: 33px auto 20px;
+
+      @include mq(lg) {
+        background: $white;
+      }
+
+      @include mq(md) {
+        margin: 30px auto 28px;
+        padding: 27px 25px;
+      }
+
+      span.button {
+        color: $dark-dark-blue;
+      }
+
+      ul {
+        width: 786px;
+        margin: 18px 0 13px;
+
+        @include mq(md) {
+          width: 85%;
+          margin: 19px 0;
+        }
+
+        li {
+          display: flex;
+
+          span {
+            display: block;
+
+            &:nth-child(1) {
+              font-family: $sb, sans-serif;
+              font-size: 18px;
+              line-height: 30px;
+              color: $dark-blue;
+              width: 224px;
+            }
+
+            &:nth-child(2) {
+              font-family: $r, sans-serif;
+              font-size: 18px;
+              line-height: 30px;
+              color: $grey;
+              width: 562px;
+
+              @include mq(md) {
+                width: calc(100% - 224px);
+              }
+            }
+          }
+        }
+      }
+
+      .color {
+        display: flex;
+
+        p {
+          font-family: $sb, sans-serif;
+          font-size: 18px;
+          color: $dark-blue;
+          width: 224px;
+        }
+
+        figure {
+          display: flex;
+
+          span {
+            font-family: $r, sans-serif;
+            font-size: 18px;
+            line-height: 22px;
+            color: $grey;
+            display: block;
+            padding-left: 27px;
+            position: relative;
+            cursor: pointer;
+
+            &:before {
+              content: "";
+              display: block;
+              width: 18px;
+              height: 18px;
+
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+            }
+
+            &.blue {
+
+              &:before {
+                background: #a3d7e5;
+              }
+            }
+
+            &.pink {
+              margin-left: 29px;
+
+              &:before {
+                background: #ffb0cd;
+              }
+            }
+
+            &.active {
+              font-family: $sb, sans-serif;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .price {
+        position: absolute;
+        top: 39px;
+        left: 601px;
+
+        @include mq(md) {
+          left: 401px;
+        }
+      }
+
+      .catalog__content-img {
+        position: absolute;
+        top: -84px;
+        right: 218px;
+
+        @include mq(xl) {
+          right: 165px;
+        }
+
+        @include mq(lg) {
+          right: -25px;
+        }
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: $bright-blue;
+        box-shadow: $shadow1;
+        border-radius: 5px;
+        transform: rotate(15.18deg);
+        position: absolute;
+        top: 4px;
+        left: -30px;
+
+        @include mq(md) {
+          display: none;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+
+      @include mq(lg) {
+        flex-wrap: wrap;
+      }
+
+      @include mq(md) {
+        width: 100%;
+        max-width: 540px;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+
+      .form-group {
+
+        input {
+          font-family: $sb, sans-serif;
+          font-size: 15px;
+          line-height: 18px;
+          color: $dark-blue;
+          box-sizing: border-box;
+          display: block;
+          width: 100%;
+          padding: 22px 19px 15px;
+          background: $white;
+          box-shadow: $shadow2;
+          border-radius: 10px;
+          border: none;
+
+          &::placeholder {
+            font-family: $sb, sans-serif;
+            font-size: 15px;
+            line-height: 18px;
+            color: $dark-blue;
+            opacity: 1;
+          }
+
+          &:active, &:focus, &:required {
+            outline: none;
+          }
+        }
+
+        button {
+          padding: 16px 0 10px;
+        }
+
+        &.name, &.tel {
+          width: 260px;
+        }
+
+        &.tel {
+          margin: 0 20px;
+
+          @include mq(md) {
+            margin: 0;
+          }
+        }
+
+        &.order {
+          width: 280px;
+
+          @include mq(md) {
+            margin: 20px auto 0;
+          }
+        }
+      }
+
+      h6 {
+        text-align: right;
+        margin-left: auto;
+
+        @include mq(lg) {
+          width: 100%;
+          text-align: center;
+          margin: 13px auto 0;
+        }
+
+        br {
+
+          @include mq(lg) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      background: $pale-red;
+      box-shadow: $shadow1;
+      border-radius: 5px;
+      position: absolute;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    &:before {
+      width: 124px;
+      height: 124px;
+      transform: rotate(-11.11deg);
+      top: -38px;
+      left: 523px;
+    }
+
+    &:after {
+      width: 69px;
+      height: 69px;
+      transform: rotate(2.72deg);
+      bottom: 55px;
+      right: -34px;
+    }
+  }
+}

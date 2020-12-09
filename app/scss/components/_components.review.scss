@@ -1,0 +1,126 @@
+/*
+    review style
+ */
+
+.review {
+  background: $blue-gradient;
+  padding: 75px 0;
+
+  @include mq(md) {
+    padding: 28px 0 40px;
+  }
+
+  .container {
+    position: relative;
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 40px;
+      box-shadow: $shadow1;
+      border-radius: 5px;
+      position: absolute;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    &:before {
+      background: $pale-yellow;
+      transform: rotate(-12.35deg);
+      bottom: 54.37px;
+      right: -21px;
+    }
+
+    &:after {
+      background: $pale-red;
+      transform: rotate(13.53deg);
+      bottom: 185.75px;
+      right: -76px;
+    }
+  }
+
+  h4 {
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 64px;
+      height: 64px;
+      background: $bright-blue;
+      box-shadow: $shadow1;
+      border-radius: 5px;
+      transform: rotate(8.52deg);
+      position: absolute;
+      top: -38px;
+      right: -202px;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    margin: 82px auto 69px;
+
+    @include mq(md) {
+      margin: 50px auto 32px;
+    }
+
+    &-item {
+      display: flex !important;
+
+      figure {
+        box-sizing: border-box;
+        width: 50%;
+
+        p {
+          color: $white;
+        }
+
+        h6 {
+          color: $pale-yellow;
+          margin-top: 13px;
+        }
+
+        &:nth-child(1) {
+          padding: 0 60px 0 40px;
+
+          @include mq(md) {
+            padding: 0 30px 0 0;
+          }
+        }
+
+        &:nth-child(2) {
+          padding: 0 40px 0 60px;
+
+          @include mq(md) {
+            padding: 0 0 0 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin: 0 40px 0 auto;
+
+    .prev-arrow, .next-arrow {
+      width: 15px;
+      height: 27px;
+      background: url("../img/arrow.png") no-repeat center/cover;
+      cursor: pointer;
+    }
+
+    .next-arrow {
+      transform: scale(-1, 1);
+    }
+  }
+}
