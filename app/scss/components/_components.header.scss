@@ -6,7 +6,7 @@
   background: $blue-gradient;
   padding: 19px 0 62.79px;
   position: relative;
-  z-index: 9;
+  z-index: 11;
 
   @include mq(md) {
     padding: 32px 0 23px;
@@ -116,9 +116,20 @@
         left: -5%;
       }
 
+      @include mq(xs) {
+        width: 109%;
+        min-width: 318px;
+        left: -11.72%;
+        margin: -25px auto;
+      }
+
       img {
         position: relative;
         z-index: 9;
+
+        @include mq(xs) {
+          width: 100%;
+        }
       }
 
       &:before, &:after {
@@ -137,6 +148,11 @@
         @include mq(md) {
           top: -43px;
           left: -48px;
+        }
+
+        @include mq(xs) {
+          width: 201px;
+          height: 391px;
         }
       }
 
@@ -241,6 +257,13 @@
           margin: 0 auto;
         }
 
+        @include mq(s) {
+          width: 100%;
+          max-width: 600px;
+          height: auto;
+          padding-bottom: 60%;
+        }
+
         img {
           border-radius: inherit;
         }
@@ -258,6 +281,16 @@
           z-index: 11;
           pointer-events: none;
           transition: all 0.5s ease-in-out;
+
+          @include mq(s) {
+            width: 50px;
+            height: 50px;
+          }
+
+          @include mq(xs) {
+            width: 29px;
+            height: 29px;
+          }
         }
 
         &:before, &:after {
@@ -276,6 +309,18 @@
           transform: rotate(-40.59deg);
           bottom: 52.19px;
           left: -102.63px;
+
+          @include mq(s) {
+            width: 114px;
+            height: 114px;
+            bottom: 34.74px;
+            left: -42.18px;
+          }
+
+          @include mq(xs) {
+            width: 75px;
+            height: 75px;
+          }
         }
 
         &:after {
@@ -284,6 +329,18 @@
           transform: rotate(7.87deg);
           top: -24px;
           right: -32.16px;
+
+          @include mq(s) {
+            width: 53px;
+            height: 53px;
+            top: -10.55px;
+            right: -13.5px;
+          }
+
+          @include mq(xs) {
+            width: 34px;
+            height: 34px;
+          }
         }
 
         &:hover {
@@ -321,6 +378,10 @@
         margin: 28.64px auto 0;
       }
 
+      @include mq(xs) {
+        display: block;
+      }
+
       figure {
         box-sizing: border-box;
         width: 180px;
@@ -331,6 +392,12 @@
         position: relative;
         z-index: 9;
         margin-bottom: 80px;
+
+        @include mq(xs) {
+          width: 62%;
+          min-width: 180px;
+          margin: 0 auto 15px;
+        }
 
         img {
 
@@ -370,6 +437,10 @@
 
         &:nth-child(3) {
           margin-bottom: 0;
+
+          @include mq(xs) {
+            margin-bottom: 15px;
+          }
         }
 
         &:last-child {
@@ -396,16 +467,25 @@
       left: 50%;
       transform: translateX(-50%);
     }
+
+    @include mq(xs) {
+      transform: none;
+    }
   }
 
   &:before {
     background: url("../img/header/wave-first.png") no-repeat center/cover;
 
-    @include mq(md) {
+    @include mq(xs) {
+      left: -252px;
     }
   }
 
   &:after {
     background: url("../img/header/wave-second.png") no-repeat center/cover;
+
+    @include mq(xs) {
+      left: -422px;
+    }
   }
 }

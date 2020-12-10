@@ -31,42 +31,151 @@
         padding: 27px 25px;
       }
 
-      span.button {
-        color: $dark-dark-blue;
+      @include mq(s) {
+        padding: 27px 25px 480px;
       }
 
-      ul {
-        width: 786px;
-        margin: 18px 0 13px;
+      @include mq(xs) {
+        padding: 27px 15px 480px;
+      }
 
-        @include mq(md) {
-          width: 85%;
-          margin: 19px 0;
+      span.button {
+        color: $dark-dark-blue;
+
+        @include mq(s) {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      //ul.desctop {
+      //  width: 786px;
+      //  margin: 18px 0 13px;
+      //
+      //  @include mq(md) {
+      //    width: 85%;
+      //    margin: 19px 0;
+      //  }
+      //
+      //  @include mq(s) {
+      //    width: 100%;
+      //    margin: 19px auto;
+      //  }
+      //
+      //  li {
+      //    display: flex;
+      //
+      //    span {
+      //      display: block;
+      //
+      //      &:nth-child(1) {
+      //        font-family: $sb, sans-serif;
+      //        font-size: 18px;
+      //        line-height: 30px;
+      //        color: $dark-blue;
+      //        width: 224px;
+      //
+      //        @include mq(xs) {
+      //          width: auto;
+      //        }
+      //      }
+      //
+      //      &:nth-child(2) {
+      //        font-family: $r, sans-serif;
+      //        font-size: 18px;
+      //        line-height: 30px;
+      //        color: $grey;
+      //        width: 562px;
+      //
+      //        @include mq(md) {
+      //          width: calc(100% - 224px);
+      //        }
+      //
+      //        @include mq(xs) {
+      //          width: auto;
+      //        }
+      //      }
+      //    }
+      //  }
+      //}
+
+      ul {
+
+        &.desctop {
+          width: 768px;
+          margin: 18px 0 13px;
+
+          @include mq(md) {
+            width: 85%;
+            margin: 19px 0;
+          }
+
+          @include mq(s) {
+            width: 100%;
+            margin: 19px auto;
+          }
+
+          @include mq(xs) {
+            display: none;
+          }
+
+          li {
+            display: flex;
+
+            span {
+              display: block;
+
+              &:nth-child(1) {
+                font-family: $sb, sans-serif;
+                font-size: 18px;
+                line-height: 30px;
+                color: $dark-blue;
+                width: 224px;
+              }
+
+              &:nth-child(2) {
+                font-family: $r, sans-serif;
+                font-size: 18px;
+                line-height: 30px;
+                color: $grey;
+                width: 562px;
+
+                @include mq(md) {
+                  width: calc(100% - 224px);
+                }
+              }
+            }
+          }
         }
 
-        li {
-          display: flex;
+        &.mobile {
+          display: none;
 
-          span {
+          @include mq(xs) {
             display: block;
+            margin: 19px auto;
+          }
 
-            &:nth-child(1) {
-              font-family: $sb, sans-serif;
-              font-size: 18px;
-              line-height: 30px;
-              color: $dark-blue;
-              width: 224px;
-            }
+          li {
 
-            &:nth-child(2) {
+            p {
               font-family: $r, sans-serif;
               font-size: 18px;
               line-height: 30px;
               color: $grey;
-              width: 562px;
 
-              @include mq(md) {
-                width: calc(100% - 224px);
+              span {
+                font-family: $sb, sans-serif;
+                font-size: 18px;
+                line-height: 30px;
+                color: $dark-blue;
+                width: 224px;
+                display: inline-block;
+
+                @include mq(xs) {
+                  width: auto;
+                  margin-right: 5px;
+                }
               }
             }
           }
@@ -75,6 +184,10 @@
 
       .color {
         display: flex;
+
+        @include mq(xs) {
+          display: block;
+        }
 
         p {
           font-family: $sb, sans-serif;
@@ -86,6 +199,10 @@
         figure {
           display: flex;
 
+          @include mq(xs) {
+            margin-top: 15px;
+          }
+
           span {
             font-family: $r, sans-serif;
             font-size: 18px;
@@ -95,6 +212,7 @@
             padding-left: 27px;
             position: relative;
             cursor: pointer;
+            transition: all 0.5s ease-in-out;
 
             &:before {
               content: "";
@@ -140,6 +258,12 @@
         @include mq(md) {
           left: 401px;
         }
+
+        @include mq(s) {
+          position: static;
+          text-align: center;
+          margin: 39px auto 0;
+        }
       }
 
       .catalog__content-img {
@@ -153,6 +277,16 @@
 
         @include mq(lg) {
           right: -25px;
+        }
+
+        @include mq(s) {
+          top: calc(100% - 514px);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        img {
+          transition: all 0.5s ease-in-out;
         }
       }
 
@@ -178,6 +312,8 @@
     form {
       display: flex;
       align-items: center;
+      position: relative;
+      z-index: 20;
 
       @include mq(lg) {
         flex-wrap: wrap;
@@ -188,6 +324,10 @@
         max-width: 540px;
         justify-content: space-between;
         margin: 0 auto;
+      }
+
+      @include mq(xs) {
+        max-width: 400px;
       }
 
       .form-group {
@@ -225,6 +365,10 @@
 
         &.name, &.tel {
           width: 260px;
+
+          @include mq(xs) {
+            width: 100%;
+          }
         }
 
         &.tel {
@@ -233,6 +377,10 @@
           @include mq(md) {
             margin: 0;
           }
+
+          @include mq(xs) {
+            margin: 10px auto 20px;
+          }
         }
 
         &.order {
@@ -240,6 +388,11 @@
 
           @include mq(md) {
             margin: 20px auto 0;
+          }
+
+          @include mq(xs) {
+            width: 100%;
+            margin: 0 auto;
           }
         }
       }
@@ -258,6 +411,10 @@
 
           @include mq(lg) {
             display: none;
+          }
+
+          @include mq(xs) {
+            display: block;
           }
         }
       }

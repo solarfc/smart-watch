@@ -94,6 +94,20 @@
         margin: -39px auto -33px;
         left: -5%;
       }
+
+      @include mq(xs) {
+        width: 109%;
+        min-width: 318px;
+        left: -11.72%;
+        margin: -12px auto;
+      }
+
+      img {
+
+        @include mq(xs) {
+          width: 100%;
+        }
+      }
     }
 
     .to-order {
@@ -162,6 +176,11 @@
       width: 1000px;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    @include mq(xs) {
+      left: -331px;
+      transform: none;
     }
   }
 
