@@ -74,7 +74,7 @@
     &-item {
       display: flex !important;
 
-      @include mq(xs) {
+      @include mq(s) {
         display: block !important;
       }
 
@@ -82,7 +82,7 @@
         box-sizing: border-box;
         width: 50%;
 
-        @include mq(xs) {
+        @include mq(s) {
           width: 100%;
         }
 
@@ -103,10 +103,6 @@
           }
 
           @include mq(s) {
-            padding-right: 10px;
-          }
-
-          @include mq(xs) {
             padding: 0;
             margin-bottom: 32px;
           }
@@ -120,10 +116,6 @@
           }
 
           @include mq(s) {
-            padding-left: 10px;
-          }
-
-          @include mq(xs) {
             padding: 0;
           }
         }
@@ -137,7 +129,7 @@
     width: 180px;
     margin: 0 40px 0 auto;
 
-    @include mq(xs) {
+    @include mq(s) {
       margin-right: 0;
     }
 

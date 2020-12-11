@@ -5,9 +5,14 @@ var myWidth = window.innerWidth,
 console.log("width ".concat(myWidth, " \n height ").concat(myHeight));
 
 window.onload = function () {
+  setTimeout(function () {
+    document.querySelector('.loader').style.display = 'none';
+    document.querySelector('html').style.overflowY = 'scroll';
+  }, 1500);
   /*
-      icrease date
+      increase date
    */
+
   var today = new Date(),
       tomorrow = new Date(),
       day,

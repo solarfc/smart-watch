@@ -232,6 +232,10 @@
         margin: 0 auto;
       }
 
+      h4 {
+        max-width: 414px;
+      }
+
       p {
         margin: 10px auto 40px;
 
@@ -355,7 +359,7 @@
     &-info {
       max-width: 600px;
       box-sizing: border-box;
-      padding: 0 32px 0 128px;
+      padding: 0 0px 0 128px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -363,7 +367,7 @@
 
       @include mq(xl) {
         width: 540px;
-        padding-left: 88px;
+        padding-left: 75px;
       }
 
       @include mq(lg) {
@@ -374,8 +378,12 @@
       @include mq(md) {
         padding: 0;
         width: 100%;
-        max-width: 440px;
+        max-width: 540px;
         margin: 28.64px auto 0;
+      }
+
+      @include mq(s) {
+        max-width: 500px;
       }
 
       @include mq(xs) {
@@ -384,7 +392,7 @@
 
       figure {
         box-sizing: border-box;
-        width: 180px;
+        width: 220px;
         padding: 31px 9px 16px;
         background: $white;
         box-shadow: $shadow1;
@@ -393,9 +401,17 @@
         z-index: 9;
         margin-bottom: 80px;
 
+        @include mq(lg) {
+          width: 180px;
+        }
+
+        @include mq(md) {
+          width: 220px;
+        }
+
         @include mq(xs) {
-          width: 62%;
-          min-width: 180px;
+          width: 75%;
+          min-width: 220px;
           margin: 0 auto 15px;
         }
 

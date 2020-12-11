@@ -256,6 +256,7 @@
         left: 601px;
 
         @include mq(md) {
+          top: 9px;
           left: 401px;
         }
 

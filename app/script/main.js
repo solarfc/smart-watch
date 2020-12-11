@@ -2,10 +2,16 @@ let myWidth = window.innerWidth,
     myHeight = window.innerHeight;
 console.log(`width ${myWidth} \n height ${myHeight}`);
 
+
 window.onload = function () {
 
+    setTimeout(() => {
+        document.querySelector('.loader').style.display = 'none';
+        document.querySelector('html').style.overflowY = 'scroll';
+    }, 1500);
+
     /*
-        icrease date
+        increase date
      */
 
     let today = new Date(),
