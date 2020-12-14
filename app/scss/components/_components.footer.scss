@@ -110,10 +110,6 @@
       }
     }
 
-    .to-order {
-
-    }
-
     >h6.small {
       text-align: center;
       color: $light-blue;
@@ -170,7 +166,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -1;
 
     @include mq(md) {
       width: 1000px;

@@ -595,7 +595,7 @@ a.bucket:after {
   background: linear-gradient(90deg, #5db0ec 0%, #4a99d1 100%);
   padding: 19px 0 62.79px;
   position: relative;
-  z-index: 11;
+  z-index: 25;
 }
 
 @media (max-width: 979px) {
@@ -815,14 +815,14 @@ a.bucket:after {
 .header__content:before {
   width: 1920px;
   height: 809px;
-  background: url("../img/header/leaves.png") no-repeat center/cover;
+  background: url("../img/header/bg.png") no-repeat center/cover;
   top: -19px;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .header__content:after {
@@ -1032,6 +1032,12 @@ a.bucket:after {
   }
 }
 
+.header__block-video figure.clip:hover .video-play {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+      -ms-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+}
+
 .header__block-info {
   max-width: 600px;
   -webkit-box-sizing: border-box;
@@ -1226,6 +1232,28 @@ a.bucket:after {
 @media (max-width: 979px) {
   .catalog {
     padding: 46px 0 59px;
+  }
+}
+
+.catalog .container {
+  position: relative;
+}
+
+.catalog .container:after {
+  content: "";
+  display: block;
+  width: 566px;
+  height: 621px;
+  background: url("../img/catalog/leaves.png") no-repeat center/cover;
+  position: absolute;
+  top: -74px;
+  right: -220.98px;
+  opacity: 0.3;
+}
+
+@media (max-width: 979px) {
+  .catalog .container:after {
+    display: none;
   }
 }
 
@@ -1760,9 +1788,6 @@ a.bucket:after {
   content: "";
   display: block;
   position: absolute;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 5px rgba(47, 105, 146, 0.3);
-          box-shadow: 0px 0px 5px rgba(47, 105, 146, 0.3);
 }
 
 @media (max-width: 979px) {
@@ -1772,14 +1797,15 @@ a.bucket:after {
 }
 
 .gallery .container:before {
-  width: 113px;
-  height: 113px;
-  background: #fef286;
-  -webkit-transform: rotate(-12.35deg);
-      -ms-transform: rotate(-12.35deg);
-          transform: rotate(-12.35deg);
-  top: 121px;
-  left: -54px;
+  width: 566px;
+  height: 621px;
+  background: url("../img/catalog/leaves.png") no-repeat center/cover;
+  top: 52px;
+  left: -326px;
+  -webkit-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+  opacity: 0.3;
 }
 
 .gallery .container:after {
@@ -1791,6 +1817,9 @@ a.bucket:after {
           transform: rotate(19.97deg);
   bottom: 134.51px;
   right: -100px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px rgba(47, 105, 146, 0.3);
+          box-shadow: 0px 0px 5px rgba(47, 105, 146, 0.3);
 }
 
 .gallery__content {
@@ -1932,6 +1961,27 @@ a.bucket:after {
 
 .gallery__content a:hover:after {
   opacity: 1;
+}
+
+.gallery .rectangle {
+  width: 113px;
+  height: 113px;
+  background: #fef286;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px rgba(47, 105, 146, 0.3);
+          box-shadow: 0px 0px 5px rgba(47, 105, 146, 0.3);
+  -webkit-transform: rotate(-12.35deg);
+      -ms-transform: rotate(-12.35deg);
+          transform: rotate(-12.35deg);
+  position: absolute;
+  top: 121px;
+  left: -54px;
+}
+
+@media (max-width: 979px) {
+  .gallery .rectangle {
+    display: none;
+  }
 }
 
 /*
@@ -2327,7 +2377,6 @@ a.bucket:after {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
 }
 
 @media (max-width: 979px) {

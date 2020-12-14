@@ -17,8 +17,6 @@
       content: "";
       display: block;
       position: absolute;
-      border-radius: 5px;
-      box-shadow: $shadow1;
 
       @include mq(md) {
         display: none;
@@ -26,12 +24,13 @@
     }
 
     &:before {
-      width: 113px;
-      height: 113px;
-      background: $pale-yellow;
-      transform: rotate(-12.35deg);
-      top: 121px;
-      left: -54px;
+      width: 566px;
+      height: 621px;
+      background: url("../img/catalog/leaves.png") no-repeat center/cover;
+      top: 52px;
+      left: -326px;
+      transform: scale(-1, 1);
+      opacity: 0.3;
     }
 
     &:after {
@@ -41,6 +40,8 @@
       transform: rotate(19.97deg);
       bottom: 134.51px;
       right: -100px;
+      border-radius: 5px;
+      box-shadow: $shadow1;
     }
   }
 
@@ -162,6 +163,22 @@
           opacity: 1;
         }
       }
+    }
+  }
+
+  .rectangle {
+    width: 113px;
+    height: 113px;
+    background: $pale-yellow;
+    border-radius: 5px;
+    box-shadow: $shadow1;
+    transform: rotate(-12.35deg);
+    position: absolute;
+    top: 121px;
+    left: -54px;
+
+    @include mq(md) {
+      display: none;
     }
   }
 }
